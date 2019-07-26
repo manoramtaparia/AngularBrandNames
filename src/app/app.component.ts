@@ -1,0 +1,40 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'my-app',
+  templateUrl: './app.component.html',
+  styleUrls: [ './app.component.css' ]
+})
+export class AppComponent  {
+  BrandList = [
+  {
+    name: "LG",
+    link: "https://www.lg.com",
+    desc: "Life's Good",
+    logo: "https://www.prophet.com/relevantbrands-2017/wp-content/uploads/2016/10/lg-logo.png"
+  },
+  {
+    name: "Samsung",
+    link: "https://www.samsung.com",
+    desc: "Samsung says hi!",
+    logo: "data:image/png;base64,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"
+  },
+  {
+    name: "Apple",
+    link: "https://www.apple.com",
+    desc: "Apple - Making the best phones and much more",
+    logo: "https://image.flaticon.com/icons/png/128/37/37150.png"
+  }
+];
+
+removeBrand(event){
+  for (let item of this.BrandList){
+    if(item.name == event){
+      item.name="";
+      item.desc="";
+      item.link="";
+      item.logo="";
+    }
+  }
+}
+}
